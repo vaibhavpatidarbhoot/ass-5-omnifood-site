@@ -1,0 +1,917 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    font-size: 1.6rem;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.4rem;
+    border: none;
+    border-radius: 0.8rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: #e67e22;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #cf711f;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #e67e22;
+}
+
+.btn-outline:hover {
+    background-color: #e67e22;
+    color: white;
+}
+
+.btn-dark {
+    background-color: #333;
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: #222;
+}
+
+.btn-large {
+    padding: 1.6rem 3.2rem;
+    font-size: 1.8rem;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eee;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8rem;
+}
+
+.logo {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #e67e22;
+    text-decoration: none;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 3.2rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #e67e22;
+}
+
+.mobile-nav-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-nav-icon {
+    width: 2.4rem;
+    height: 2px;
+    background-color: #333;
+    display: block;
+    position: relative;
+}
+
+.mobile-nav-icon::before,
+.mobile-nav-icon::after {
+    content: '';
+    width: 2.4rem;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.mobile-nav-icon::before {
+    top: -0.8rem;
+}
+
+.mobile-nav-icon::after {
+    top: 0.8rem;
+}
+
+/* Hero */
+.hero {
+    background-color: #fdf2e9;
+    padding: 8rem 0 12rem 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 3.2rem;
+    color: #333;
+}
+
+.hero-description {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+    color: #555;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.6rem;
+    margin-bottom: 8rem;
+}
+
+.hero-customers {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.customer-photos {
+    display: flex;
+    margin-right: 1.6rem;
+}
+
+.customer-photo {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    margin-right: -1.6rem;
+    border: 3px solid #fdf2e9;
+}
+
+.customer-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 1.2rem;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+}
+
+/* Featured */
+.featured {
+    padding: 4.8rem 0 3.2rem 0;
+    background-color: white;
+}
+
+.featured-title {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color: #888;
+}
+
+.featured-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.featured-logo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #999;
+    opacity: 0.5;
+}
+
+/* How it works */
+.how-it-works {
+    padding: 9.6rem 0;
+    background-color: #f8f9fa;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 9.6rem;
+}
+
+.section-subtitle {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #e67e22;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+}
+
+.section-title {
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+    color: #333;
+}
+
+.how-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 9.6rem;
+    align-items: center;
+}
+
+.how-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.step {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.step-number {
+    font-size: 8.6rem;
+    font-weight: 600;
+    color: #ddd;
+    flex-shrink: 0;
+}
+
+.step-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+    color: #333;
+}
+
+.step-description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.how-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+}
+
+.how-img {
+    width: 100%;
+    border-radius: 1.2rem;
+    box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
+}
+
+.how-img-2 {
+    margin-top: 3.2rem;
+}
+
+/* Meals */
+.meals {
+    padding: 9.6rem 0;
+    background-color: white;
+}
+
+.meals-content {
+    margin-bottom: 4.8rem;
+}
+
+.meal-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6.4rem;
+    margin-bottom: 4.8rem;
+}
+
+.meal-card {
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    transition: all 0.4s;
+    position: relative;
+}
+
+.meal-card:hover {
+    transform: translateY(-1.2rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-img {
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+}
+
+.meal-badge {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #333;
+    border-radius: 10rem;
+    font-weight: 600;
+}
+
+.meal-badge.vegetarian {
+    background-color: #51cf66;
+}
+
+.meal-badge.vegan {
+    background-color: #51cf66;
+}
+
+.meal-badge.paleo {
+    background-color: #ffd43b;
+    top: 1.2rem;
+    right: 1.2rem;
+    left: auto;
+}
+
+.meal-info {
+    padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-title {
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+}
+
+.meal-stats {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.meal-stat {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.stat-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    color: #e67e22;
+}
+
+.diet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.diet-title {
+    font-size: 3rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+}
+
+.diets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.diet-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    line-height: 1.2;
+}
+
+.meals-link {
+    text-align: center;
+}
+
+.link {
+    display: inline-block;
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: all 0.3s;
+}
+
+.link:hover {
+    color: #cf711f;
+    border-bottom: 1px solid transparent;
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: #fdf2e9;
+    padding: 9.6rem 0;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.8rem;
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 3.2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.testimonial-img {
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+}
+
+.testimonial-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.4rem;
+}
+
+.testimonial-stars {
+    color: #e67e22;
+}
+
+.testimonial-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #555;
+    font-style: italic;
+}
+
+/* Pricing */
+.pricing {
+    padding: 9.6rem 0;
+    background-color: white;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.8rem;
+    max-width: 80rem;
+    margin: 0 auto 4.8rem auto;
+}
+
+.pricing-card {
+    border: 2px solid #fdf2e9;
+    border-radius: 1.2rem;
+    padding: 4.8rem;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+    position: relative;
+}
+
+.pricing-card-featured {
+    border-color: #e67e22;
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.best-value-badge {
+    position: absolute;
+    top: -1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e67e22;
+    color: white;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 4.8rem;
+}
+
+.plan-name {
+    color: #e67e22;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    margin-bottom: 3.2rem;
+}
+
+.plan-price {
+    margin-bottom: 1.6rem;
+}
+
+.price {
+    font-size: 6.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.price-period {
+    font-size: 1.6rem;
+    color: #6f6f6f;
+}
+
+.price-description {
+    font-size: 1.6rem;
+    color: #6f6f6f;
+}
+
+.pricing-features {
+    margin-bottom: 4.8rem;
+}
+
+.feature {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.pricing-disclaimer {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #6f6f6f;
+    margin-bottom: 9.6rem;
+}
+
+.pricing-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.8rem;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.benefit {
+    text-align: center;
+}
+
+.benefit-icon {
+    font-size: 3.2rem;
+    margin-bottom: 3.2rem;
+}
+
+.benefit-title {
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+}
+
+.benefit-description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* CTA */
+.cta {
+    padding: 4.8rem 0 12.8rem 0;
+    background: linear-gradient(to right bottom, #eb984e, #e67e22);
+}
+
+.cta-card {
+    background-color: white;
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+    border-radius: 1.2rem;
+    overflow: hidden;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.cta-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: white;
+}
+
+.cta-text {
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    color: #45260a;
+}
+
+.cta-title {
+    color: #45260a;
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 3.2rem;
+}
+
+.cta-description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 4.8rem;
+}
+
+.cta-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+    grid-column: 1 / -1;
+}
+
+.form-input,
+.form-select {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: #fdf2e9;
+    border-radius: 0.9rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-input::placeholder {
+    color: #aaa;
+}
+
+.form-select {
+    grid-column: 1 / -1;
+}
+
+.cta-form button {
+    grid-column: 1 / -1;
+    margin-top: 1.2rem;
+}
+
+.cta-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer */
+.footer {
+    padding: 12.8rem 0;
+    background-color: #2d3748;
+    color: white;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 6.4rem;
+}
+
+.footer-logo {
+    display: block;
+    color: #e67e22;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-bottom: 3.2rem;
+}
+
+.footer-copyright {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #a0aec0;
+    margin-bottom: 2.4rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.social-link {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: white;
+}
+
+.footer-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.footer-link {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #a0aec0;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 84em) {
+    .hero-title {
+        font-size: 4.4rem;
+    }
+    
+    .section-title {
+        font-size: 3.6rem;
+    }
+}
+
+@media (max-width: 75em) {
+    html {
+        font-size: 56.25%;
+    }
+    
+    .hero-content {
+        gap: 4.8rem;
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 59em) {
+    html {
+        font-size: 50%;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 6.4rem;
+    }
+    
+    .hero-img {
+        width: 60%;
+    }
+    
+    .featured-logos {
+        flex-wrap: wrap;
+    }
+    
+    .how-content {
+        grid-template-columns: 1fr;
+        gap: 6.4rem;
+    }
+    
+    .meal-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .pricing-cards {
+        grid-template-columns: 1fr;
+        gap: 6.4rem;
+    }
+    
+    .pricing-benefits {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4.8rem;
+    }
+    
+    .cta-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-img {
+        height: 32rem;
+        grid-row: 1;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4.8rem;
+    }
+    
+    .nav {
+        display: none;
+    }
+    
+    .mobile-nav-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 44em) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    
+    .hero-customers {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    
+    .meal-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-benefits {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
